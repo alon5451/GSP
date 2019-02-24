@@ -1,20 +1,12 @@
 <!doctype html>
 <html lang="en">
     <head>
-      <style>
-        html,body{
-          width: 100%;
-          height: 100%;
-          margin: 0px;
-          padding: 0px;
-          overflow-x: hidden;
-          }
-       </style>
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Jerusalem Visiting Data</title>
+        <link rel="icon" href="img/israel.png" />
+        <title>Visiton</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -26,8 +18,34 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <style>
+
+         </style>
     </head>
     <body>
+      <div id="back_to_tb">
+        <div id="top-bar">
+          <a href="index.html">
+            <img src="img/1israel.png" id="logo">
+          </a>
+
+          <a href="index.html" class="top-bar-section top-bar-menu" style="border-left: 0px; padding: 17px 23px 0px 23px;">
+               Home
+          </a>
+          <a href="Jerusalem.html" class="top-bar-section top-bar-menu">
+             Jerusalem
+          </a>
+          <a href="file:///C:/Users/GooglePakar5/Documents/GitHub/sam/alphash/home.html" class="top-bar-section top-bar-menu">
+             Tel-Aviv
+          </a>
+          <a href="file:///C:/Users/GooglePakar5/Documents/GitHub/sam/alphash/home.html" class="top-bar-section top-bar-menu">
+             Be'er Sheva
+          </a>
+
+
+      </div>
+    </div>
+
 
         <!--================Header Menu Area =================-->
 
@@ -38,37 +56,33 @@
         <!--================End Home Banner Area =================-->
 
         <!--================Home Gallery Area =================-->
-        <section class="home_banner_area">
+        <section class="home_banner_area" style="z-index: -2;">
+
             <div class="banner_inner d-flex align-items-center">
                 <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
                 <div class="container">
                     <div class="banner_content text-center">
-                        <h2>Jerusalem Visiting Data</h2>
-                        <p><strong>האתר מציג עומסים במרכזים שונים בירושלים</strong></p>
+                        <h2>Israel Visiting Data</h2>
+                        <p><strong>האתר מציג עומסים במגוון אתרים, יחסית לערים השונות</strong></p>
                         <p><small> Google המידע מבוסס נתוני</small></p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p></p>
                         <!--<iframe src="Popular_Hours\status.txt" width=50 height=40 frameborder=0 ></iframe>-->
-                        <div style="color:white"><object type="text/html" style="background: linear-gradient(to right,#fcdc00,#ffe8cc); color: red; border-radius: 10px; font-size: 300px"  width="440px" height= "40px" data="Popular_Hours\status.txt"></object></div>
-
-
+                        <object type="text/html" style="background: linear-gradient(to right,#9086A1,#5692DA); border-radius: 5px; text-align: right; font-weight: bold;  width= "350px"; height= "120px"" data="Popular_Hours\status.txt"></object>
 
                         <a href="#HGA" class="btn theme_btn">Explore Bars</a>
-                        <a href="#HBA" class="btn theme_btn">Explore Report</a>
                     </div>
 
                 </div>
 
             </div>
 
-
-        <div><p><?php include('Popular_Hours\places.txt'); ?></p></div>
         </section>
         <!--================End Home Banner Area =================-->
 
         <!--================Home Gallery Area =================-->
-        <section id="HGA" class="home_gallery_area p_120">
+        <section id="HGA" class="home_gallery_area p_120" >
             <div class="container">
                 <div class="isotope_fillter"  style="margin: 0px;">
                     <ul class="gallery_filter list">
@@ -81,7 +95,7 @@
                 </div>
             </div>
             <div align="middle">
-              <p class="text-center" style=" font-size:15px; padding: 3px; margin-top: 20px; margin-bottom: 40px; font-weight: bold; color:red; background: linear-gradient(to right,#ffdb99,#ffe8cc); width: 420px; height:30px;">ממוסגרים באדום - מקומות אשר עמוסים יותר מהשגרה</p>
+              <p class="text-center" style=" font-size:15px; padding: 3px; margin-top: 20px; margin-bottom: 40px; font-weight: bold; color:red; background: linear-gradient(to right,#ffdb99,#ffe8cc); width: 420px; height:30px; border-radius: 5px">ממוסגרים באדום - מקומות אשר עמוסים יותר מהשגרה</p>
             </div>
             <div class="container box_1620">
                 <div class="gallery_f_inner row imageGallery1">
@@ -301,9 +315,9 @@
             </div>
 
         <hr></hr>
-        <section  id="HBA" class="service_area p_120">
+        <!--<section  id="HBA" class="service_area p_120">
            <div class="container text-center">
-               <div class="main_title">
+               <div class="main_title">s
                    <h2>Excel report</h2>
                    <p>The report can be downloaded.</p>
                </div>
@@ -349,6 +363,7 @@
         <script src="js/mail-script.js"></script>
         <script src="js/theme.js"></script>
         <script type="text/javascript">
+        console.log(position().top);
             $("a[href^='#']").click(function(e) {
     e.preventDefault();
 
@@ -358,6 +373,22 @@
         scrollTop: position
     } /* speed */ );
 });
+
+// Requiring fs module in which
+// readFile function is defined.
+const fs = require('fs')
+
+// Reading data in utf-8 format
+// which is a type of character set.
+// Instead of 'utf-8' it can be
+// other character set also like 'ascii'
+fs.readFile('Popular_Hours\status.txt', 'utf-8', (err, data) => {
+    if (err) throw err;
+
+    // Converting Raw Buffer to text
+    // data using tostring function.
+    console.log(data);
+})
 
 </script>
 
