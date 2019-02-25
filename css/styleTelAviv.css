@@ -306,14 +306,14 @@ button:focus {
 }
 
 .home_banner_area .banner_inner .overlay {
-  background: url(../img/banner/ .jpg) no-repeat scroll center center;
+  background: url(../img/banner/TA1.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  height: 100%;
   bottom: 0;
   z-index: -1;
+  background-size: cover;
 }
 
 .home_banner_area .banner_inner .banner_content {
@@ -3603,13 +3603,12 @@ html,body{
     text-decoration: none;
   }
   a:hover{
-    color: orange;
+    color: red;
   }
 
 #HGA{
   z-index: 100;
 }
-
 
 
 /* End Footer Area css
