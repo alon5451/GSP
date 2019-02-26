@@ -9,15 +9,19 @@
         <title>Visiton</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
         <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
         <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
         <!-- main css -->
-        <link rel="stylesheet" href="css/styleIndex.css">
         <link rel="stylesheet" href="css/responsive.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+     integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+     crossorigin=""></script>
+        <link rel="stylesheet" href="css/styleIndex.css">
         <style>
          </style>
     </head>
@@ -84,10 +88,25 @@
             </div>
 
         </section>
+
+
+
+
+        <section id="mapSection">
+
+          <div id="generalBox">
+           <div id="mapid"></div>
+           <!--<object type="text/html" id="objectText" data="Popular_Hours\JR\status.txt"></object>-->
+
+          </div>
+
+
+        </section>
         <!--================End Home Banner Area =================-->
 
         <!--================Home Gallery Area =================-->
-        <section id="HGA" class="home_gallery_area p_120" >
+        <section id="HGA" class="home_gallery_area p_120" style="z-index:3;" >
+
             <div class="container">
                 <div class="isotope_fillter"  style="margin: 0px;">
                     <ul class="gallery_filter list">
@@ -106,218 +125,276 @@
                 <div class="gallery_f_inner row imageGallery1">
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון מלחה.png" alt="">
+                            <img src="Popular_Hours\JR\קניון מלחה.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון מלחה.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון מלחה.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון ממילא.png" alt="">
+                            <img src="Popular_Hours\JR\קניון ממילא.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון ממילא.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון ממילא.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון הדר.png" alt="">
+                            <img src="Popular_Hours\JR\קניון הדר.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון הדר.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון הדר.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון הפסגה.png" alt="">
+                            <img src="Popular_Hours\JR\קניון הפסגה.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון הפסגה.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון הפסגה.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\ישפרו סנטר ירושלים.png" alt="">
+                            <img src="Popular_Hours\JR\ישפרו סנטר ירושלים.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\ישפרו סנטר ירושלים.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\ישפרו סנטר ירושלים.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון גילה.png" alt="">
+                            <img src="Popular_Hours\JR\קניון גילה.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון גילה.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון גילה.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\שוקניון אגריפס.png" alt="">
+                            <img src="Popular_Hours\JR\שוקניון אגריפס.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\שוקניון אגריפס.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\שוקניון אגריפס.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון ישראל תלפיות.png" alt="">
+                            <img src="Popular_Hours\JR\קניון ישראל תלפיות.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון ישראל תלפיות.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון ישראל תלפיות.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 ap">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\קניון הדסה עין כרם.png" alt="">
+                            <img src="Popular_Hours\JR\קניון הדסה עין כרם.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\קניון הדסה עין כרם.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\קניון הדסה עין כרם.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unp">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\מתחם התחנה הראשונה.png" alt="">
+                            <img src="Popular_Hours\JR\מתחם התחנה הראשונה.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\מתחם התחנה הראשונה.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\מתחם התחנה הראשונה.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unp">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\שדרות ממילא.png" alt="">
+                            <img src="Popular_Hours\JR\שדרות ממילא.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\שדרות ממילא.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\שדרות ממילא.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unp">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\שוק מחנה יהודה.png" alt="">
+                            <img src="Popular_Hours\JR\שוק מחנה יהודה.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\שוק מחנה יהודה.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\שוק מחנה יהודה.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unp">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\יד קנדי.png" alt="">
+                            <img src="Popular_Hours\JR\יד קנדי.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\יד קנדי.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\יד קנדי.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\גן וואהל לוורדים.png" alt="">
+                            <img src="Popular_Hours\JR\גן וואהל לוורדים.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\גן וואהל לוורדים.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\גן וואהל לוורדים.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\גן סאקר.png" alt="">
+                            <img src="Popular_Hours\JR\גן סאקר.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\גן סאקר.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\גן סאקר.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\הגן הבוטני הלאומי.png" alt="">
+                            <img src="Popular_Hours\JR\הגן הבוטני הלאומי.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\הגן הבוטני הלאומי.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\הגן הבוטני הלאומי.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\הגן החיות התנכי.png" alt="">
+                            <img src="Popular_Hours\JR\הגן החיות התנכי.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\הגן החיות התנכי.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\הגן החיות התנכי.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\גן השושנים ירושלים.png" alt="">
+                            <img src="Popular_Hours\JR\גן השושנים ירושלים.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\גן השושנים ירושלים.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\גן השושנים ירושלים.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\פארק טדי.png" alt="">
+                            <img src="Popular_Hours\JR\פארק טדי.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\פארק טדי.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\פארק טדי.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\פארק ירושלים.png" alt="">
+                            <img src="Popular_Hours\JR\פארק ירושלים.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\פארק ירושלים.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\פארק ירושלים.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\גן פעמון הדרור.png" alt="">
+                            <img src="Popular_Hours\JR\גן פעמון הדרור.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\גן פעמון הדרור.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\גן פעמון הדרור.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 unv">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\גן לאומי עיר דוד.png" alt="">
+                            <img src="Popular_Hours\JR\גן לאומי עיר דוד.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\גן לאומי עיר דוד.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\גן לאומי עיר דוד.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 app">
                         <div class="h_gallery_item">
-                            <img src="Popular_Hours\אקדמון גבעת רם.png" alt="">
+                            <img src="Popular_Hours\JR\אקדמון גבעת רם.png" alt="">
                             <div class="hover">
                                 <a href="#"><h4></h4></a>
-                                <a class="light" href="Popular_Hours\אקדמון גבעת רם.png"><i class="fa fa-expand"></i></a>
+                                <a class="light" href="Popular_Hours\JR\אקדמון גבעת רם.png"><i class="fa fa-expand"></i></a>
                             </div>
                         </div>
                     </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 ap">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\דיזינגוף סנטר.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\דיזינגוף סנטר.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 ap">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\קניון רמת אביב.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\קניון רמת אביב.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 unv">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\פארק הירקון.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\פארק הירקון.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 unv">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\גן מאיר.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\גן מאיר.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 app">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\בננה ביץ תל אביב.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\בננה ביץ' תל אביב.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 app">
+                            <div class="h_gallery_item">
+                                <img src="Popular_Hours\TA\רכבת האוניברסיטה תל אביב.png" alt="">
+                                <div class="hover">
+                                    <a href="#"><h4></h4></a>
+                                    <a class="light" href="Popular_Hours\TA\רכבת האוניברסיטה תל אביב.png"><i class="fa fa-expand"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
                 </div>
                 <div class="button_more">
 
                     <!--<a class="btn theme_btn" href="#">Load More Images</a>-->
                 </div>
             </div>
+
 
         <hr></hr>
         <!--<section  id="HBA" class="service_area p_120">
@@ -363,12 +440,10 @@
         <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
         <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
         <script src="vendors/isotope/isotope-min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
         <script src="js/jquery.ajaxchimp.min.js"></script>
         <script src="js/mail-script.js"></script>
         <script src="js/theme.js"></script>
         <script type="text/javascript">
-        console.log(position().top);
             $("a[href^='#']").click(function(e) {
     e.preventDefault();
 
@@ -381,19 +456,157 @@
 
 // Requiring fs module in which
 // readFile function is defined.
-const fs = require('fs')
 
-// Reading data in utf-8 format
-// which is a type of character set.
-// Instead of 'utf-8' it can be
-// other character set also like 'ascii'
-fs.readFile('Popular_Hours\status.txt', 'utf-8', (err, data) => {
-    if (err) throw err;
+var mymap = L.map('mapid').setView([31.953447, 35.027728], 10);
 
-    // Converting Raw Buffer to text
-    // data using tostring function.
-    console.log(data);
-})
+var dizi = '<img src="Popular_Hours/TA/דיזינגוף סנטר.png" height="300px" width="310px"/>';
+var ramataviv = '<img src="Popular_Hours/TA/קניון רמת אביב.png" height="300px" width="310px"/>';
+var hayarkon = '<img src="Popular_Hours/TA/פארק הירקון.png" height="300px" width="310px"/>';
+var gmeir = '<img src="Popular_Hours/TA/גן מאיר.png" height="300px" width="310px"/>';
+var bananabeach = '<img src="Popular_Hours/TA/בננה ביץ תל אביב.png" height="300px" width="310px"/>';
+var rakevetuni = '<img src="Popular_Hours/TA/רכבת האוניברסיטה תל אביב.png" height="300px" width="310px"/>';
+
+var kmalha = '<img src="Popular_Hours/JR/קניון מלחה.png" height="300px" width="310px"/>';
+var kmamila = '<img src="Popular_Hours/JR/קניון ממילא.png" height="300px" width="310px"/>';
+var khadar = '<img src="Popular_Hours/JR/קניון הדר.png" height="300px" width="310px"/>';
+var khapisga = '<img src="Popular_Hours/JR/קניון הפסגה.png" height="300px" width="310px"/>';
+var kcenter = '<img src="Popular_Hours/JR/ישפרו סנטר ירושלים.png" height="300px" width="310px"/>';
+var kgilo = '<img src="Popular_Hours/JR/קניון גילה.png" height="300px" width="310px"/>';
+var kagripas = '<img src="Popular_Hours/JR/שוקניון אגריפס.png" height="300px" width="310px"/>';
+var ktalpiot = '<img src="Popular_Hours/JR/קניון ישראל תלפיות.png" height="300px" width="310px"/>';
+var keinkarem = '<img src="Popular_Hours/JR/קניון הדסה עין כרם.png" height="300px" width="310px"/>';
+var khatahana = '<img src="Popular_Hours/JR/מתחם התחנה הראשונה.png" height="300px" width="310px"/>';
+var smamila = '<img src="Popular_Hours/JR/שדרות ממילא.png" height="300px" width="310px"/>';
+var mahane = '<img src="Popular_Hours/JR/שוק מחנה יהודה.png" height="300px" width="310px"/>';
+var kenedi = '<img src="Popular_Hours/JR/יד קנדי.png" height="300px" width="310px"/>';
+var gvradim = '<img src="Popular_Hours/JR/גן וואהל לוורדים.png" height="300px" width="310px"/>';
+var gsaker = '<img src="Popular_Hours/JR/גן סאקר.png" height="300px" width="310px"/>';
+var gbotani = '<img src="Popular_Hours/JR/הגן הבוטני הלאומי.png" height="300px" width="310px"/>';
+var ghaiot = '<img src="Popular_Hours/JR/הגן החיות התנכי.png" height="300px" width="310px"/>';
+var gshoshanim = '<img src="Popular_Hours/JR/גן השושנים ירושלים.png" height="300px" width="310px"/>';
+var ptedi = '<img src="Popular_Hours/JR/פארק טדי.png" height="300px" width="310px"/>';
+var pjerus = '<img src="Popular_Hours/JR/פארק ירושלים.png" height="300px" width="310px"/>';
+var gpaamon = '<img src="Popular_Hours/JR/גן פעמון הדרור.png" height="300px" width="310px"/>';
+var gleumi = '<img src="Popular_Hours/JR/גן לאומי עיר דוד.png" height="300px" width="310px"/>';
+var academon = '<img src="Popular_Hours/JR/אקדמון גבעת רם.png" height="300px" width="310px"/>';
+
+
+var status = document.getElementById("objectText");
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox.streets'
+}).addTo(mymap);
+
+
+
+
+L.marker([32.074995, 34.775015]).addTo(mymap)
+  .bindPopup(/*"<b>קניון מלחה</b><br>"*/ dizi);
+  L.marker([32.112484, 34.795908]).addTo(mymap)
+    .bindPopup(/*"<b>קניון מלחה</b><br>"*/ ramataviv);
+    L.marker([32.100735, 34.811962]).addTo(mymap)
+      .bindPopup(/*"<b>קניון מלחה</b><br>"*/ hayarkon);
+      L.marker([32.073094, 34.773471]).addTo(mymap)
+        .bindPopup(/*"<b>קניון מלחה</b><br>"*/ gmeir);
+        L.marker([32.070451, 34.763470]).addTo(mymap)
+          .bindPopup(/*"<b>קניון מלחה</b><br>"*/ bananabeach);
+          L.marker([32.103795, 34.804915]).addTo(mymap)
+            .bindPopup(/*"<b>קניון מלחה</b><br>"*/ rakevetuni);
+
+
+            L.marker([31.75166, 35.18739]).addTo(mymap)
+          		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kmalha);
+              L.marker([31.777693 ,35.223727]).addTo(mymap)
+            		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kmamila);
+                L.marker([31.753353 ,35.213477]).addTo(mymap)
+              		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ khadar);
+                  L.marker([31.824258, 35.237105]).addTo(mymap)
+                		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ khapisga);
+                    L.marker([31.766401 ,35.148284]).addTo(mymap)
+                  		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kcenter);
+                      L.marker([31.731572, 35.187452]).addTo(mymap)
+                    		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kgilo);
+                        L.marker([31.785199 ,35.210057]).addTo(mymap)
+                      		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kagripas);
+                          L.marker([31.751102 ,35.215387]).addTo(mymap)
+                        		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ ktalpiot);
+                            L.marker([31.76779 ,35.1631]).addTo(mymap)
+                          		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ keinkarem);
+                              L.marker([31.767172, 35.224251]).addTo(mymap)
+                            		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ khatahana);
+                                L.marker([31.777735, 35.223691]).addTo(mymap)
+                              		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ smamila);
+                                  L.marker([31.784664 ,35.212656]).addTo(mymap)
+                                		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ mahane);
+                                    L.marker([31.749268 ,35.134795]).addTo(mymap)
+                                  		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ kenedi);
+                                      L.marker([31.779615 ,35.203605]).addTo(mymap)
+                                    		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ gvradim);
+                                        L.marker([31.779868 ,35.207583]).addTo(mymap)
+                                      		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ gsaker);
+                                          L.marker([31.766431, 35.201115]).addTo(mymap)
+                                        		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ gbotani);
+                                            L.marker([31.745463 ,35.177032]).addTo(mymap)
+                                          		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ ghaiot);
+                                              L.marker([31.768295, 35.219688]).addTo(mymap)
+                                            		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ gshoshanim);
+                                                L.marker([31.775151 ,35.226482]).addTo(mymap)
+                                              		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ ptedi);
+                                                  L.marker([31.743849, 35.177522]).addTo(mymap)
+                                                		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ pjerus);
+                                                    L.marker([31.770045 ,35.223181]).addTo(mymap)
+                                                  		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ gpaamon);
+                                                      L.marker([31.772287 ,35.235668]).addTo(mymap)
+                                                        .bindPopup(/*"<b>קניון מלחה</b><br>"*/ gleumi);
+                                                        L.marker([31.778804, 35.196708]).addTo(mymap)
+                                                      		.bindPopup(/*"<b>קניון מלחה</b><br>"*/ academon);
+
+
+
+
+
+
+
+
+L.circle([31.768771, 35.213161], 8000, {
+  color: 'orange',
+  fillColor: '#f03',
+  fillOpacity: 0.1
+}).addTo(mymap).appendChild(obj);
+
+
+L.circle([32.085851, 34.786948], 8000, {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.1
+}).addTo(mymap).appendChild(obj);
+
+
+
+L.polygon([
+  [51.509, -0.08],
+  [51.503, -0.06],
+  [51.51, -0.047]
+]).addTo(mymap).bindPopup("I am a polygon.");
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+  popup
+    .setLatLng(e.latlng)
+    .setContent("You clicked the map at " + e.latlng.toString())
+    .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
+
+
+
 
 </script>
 
