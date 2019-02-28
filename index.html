@@ -452,8 +452,14 @@
 
 // Requiring fs module in which
 // readFile function is defined.
+console.log();
+if ($(window).width() > 1000) {
+  var mymap = L.map('mapid').setView([31.953447, 35.027728], 10);
+}
+else {
+  var mymap = L.map('mapid').setView([32.953447, 35.027728], 10);
 
-var mymap = L.map('mapid').setView([31.953447, 35.027728], 10);
+}
 
 var dizi = '<img src="Popular_Hours/TA/דיזינגוף סנטר.png" height="300px" width="310px"/>';
 var ramataviv = '<img src="Popular_Hours/TA/קניון רמת אביב.png" height="300px" width="310px"/>';
@@ -572,14 +578,14 @@ L.circle([31.768771, 35.213161], 8000, {
   color: 'orange',
   fillColor: '#f03',
   fillOpacity: 0.1
-}).addTo(mymap).appendChild(obj);
+}).addTo(mymap);
 
 
 L.circle([32.085851, 34.786948], 8000, {
   color: 'red',
   fillColor: '#f03',
   fillOpacity: 0.1
-}).addTo(mymap).appendChild(obj);
+}).addTo(mymap);
 
 
 
