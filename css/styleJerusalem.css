@@ -530,6 +530,14 @@ html,body{
     border-left: 1px white solid;
     font-size: 15px;
   }
+  @media (max-width: 1200px){
+    .top-bar-menu{
+      font-size: 10px;
+    }
+    #logo{
+      margin: 5px 0px 0px 0;
+    }
+  }
 
   .top-bar-menu:hover{
     padding: 17px 23px 0px 23px;
@@ -567,34 +575,42 @@ html,body{
     color: orange;
   }
 
-#mapSection{
-  /*background-image: url(../img/banner/map.jpg);
-  background-size: cover;*/
-  background: linear-gradient(to top,#f9f9ff,#b0b0e2);
-  height: 900px;
-  padding-top: 40px;
 
-}
+  #mapSection{
+    /*background-image: url(../img/banner/map.jpg);
+    background-size: cover;*/
+    background: linear-gradient(to top,#f9f9ff,#b0b0e2);
+    height: 900px;
+    padding-top: 40px;
 
-#generalBox{
-  height: 600px;
-  width: 1000px;
-  margin: 0px auto 0px auto;
-  /*border: 2px solid black;*/
-  padding: 45px 50px 40px 50px;
-  text-align: center;
+  }
 
-}
+  #generalBox{
+    height: 80%;
+    width: 80%;
+    margin: 0px auto 0px auto;
+    /*border: 2px solid black;*/
+    padding: 45px 50px 40px 50px;
+    text-align: center;
+  }
 
-#mapid{
-  height: 700px;
-  width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  box-shadow: 0px 0px 20px 2px orange;
+  #mapid {
+    height: 120%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 20px 2px orange;
+  }
 
-}
-
+  @media (max-width: 1000px){
+     #generalBox{
+       width: 100%;
+     }
+     #mapid{
+      height: 80%;
+      width: 100%;
+    }
+  }
 
 
 #objectText{
