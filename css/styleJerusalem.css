@@ -510,6 +510,14 @@ html,body{
     background: rgba(200, 54, 54, 0);
   }
 
+  @media (max-width: 1200px){
+    #top-bar{
+      width: 340px;
+    }
+
+  }
+
+
   #logo{
     width: 70px;
     float: left;
