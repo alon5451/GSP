@@ -504,13 +504,20 @@ html,body{
 
   #top-bar{
 
-    width: 30%;
+    width:310px;
     margin-left: auto;
     margin-right: auto;
 
     height: 53px;
     overflow: hidden;
     background: rgba(200, 54, 54, 0);
+  }
+
+  @media (max-width: 1200px){
+    #top-bar{
+      width: 260px;
+    }
+
   }
 
   #logo{
@@ -532,6 +539,12 @@ html,body{
     font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;;
     border-left: 1px white solid;
     font-size: 15px;
+  }
+
+  @media (max-width: 1200px){
+    .top-bar-menu{
+      font-size: 10px;
+    }
   }
 
   .top-bar-menu:hover{
@@ -605,14 +618,6 @@ html,body{
     height: 80%;
     width: 100%;
   }
-}
-
-#mapSection #generalBox{
-  opacity: 1;
-}
-
-#mapSection #generalBox #mapid{
-  opacity: 1;
 }
 
 

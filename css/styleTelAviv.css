@@ -513,6 +513,14 @@ html,body{
     background: rgba(200, 54, 54, 0);
   }
 
+  @media (max-width: 1200px){
+    #top-bar{
+      width: 340px;
+    }
+
+  }
+
+
   #logo{
     width: 70px;
     float: left;
@@ -533,6 +541,15 @@ html,body{
     border-left: 1px white solid;
     font-size: 15px;
   }
+  @media (max-width: 1200px){
+    .top-bar-menu{
+      font-size: 10px;
+    }
+    #logo{
+      margin: 5px 0px 0px 0;
+    }
+  }
+
 
   .top-bar-menu:hover{
     padding: 17px 23px 0px 23px;
@@ -574,6 +591,7 @@ html,body{
   z-index: 100;
 }
 
+
 #mapSection{
   /*background-image: url(../img/banner/map.jpg);
   background-size: cover;*/
@@ -584,41 +602,40 @@ html,body{
 }
 
 #generalBox{
-  height: 600px;
-  width: 1000px;
+  height: 80%;
+  width: 80%;
   margin: 0px auto 0px auto;
   /*border: 2px solid black;*/
   padding: 45px 50px 40px 50px;
   text-align: center;
-
 }
 
-#mapid{
-  height: 700px;
-  width: 900px;
+#mapid {
+  height: 120%;
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
-
-  box-shadow: 0px 0px 20px 2px red;
-
+  box-shadow: 0px 0px 20px 2px blue;
 }
 
-#mapSection #generalBox{
-  opacity: 1;
+@media (max-width: 1000px){
+   #generalBox{
+     width: 100%;
+   }
+   #mapid{
+    height: 80%;
+    width: 100%;
+  }
 }
-
-#mapSection #generalBox #mapid{
-  opacity: 1;
-}
-
 
 #objectText{
-  background: rgba(0,0,0,0.1);
-  border-radius: 5px;
-  float: right;
+  background: rgba(212, 175, 135,0.);
   width: 400px;
-  height: 500px;
-  font-size: large;
+  height: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2px;
+  box-shadow: 0px 0px 20px 1px red;
 }*/
 
 .markerTxt{
