@@ -570,10 +570,6 @@ html,body{
     color: blue;
   }
 
-#HGA{
-  z-index: 100;
-}
-
 
 #mapSection{
   /*background-image: url(../img/banner/map.jpg);
